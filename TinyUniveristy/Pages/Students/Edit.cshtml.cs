@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TinyUniveristy.Models;
+using TinyUniversity.Models;
 
 namespace TinyUniveristy.Pages.Students
 {
     public class EditModel : PageModel
     {
-        private readonly TinyUniveristy.Models.SchoolContext _context;
+        private readonly TinyUniversity.Models.SchoolContext _context;
 
-        public EditModel(TinyUniveristy.Models.SchoolContext context)
+        public EditModel(TinyUniversity.Models.SchoolContext context)
         {
             _context = context;
         }

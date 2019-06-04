@@ -7,8 +7,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using TinyUniveristy.Models; //SchoolContext
+using TinyUniversity.Models; //SchoolContext
 using Microsoft.Extensions.DependencyInjection;//Create
+using TinyUniversity.Data;
 
 namespace TinyUniveristy
 {
@@ -25,7 +26,7 @@ namespace TinyUniveristy
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
-                    context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using TinyUniveristy.Models;
+using TinyUniversity.Models;
 
 namespace TinyUniveristy.Pages.Students
 {
     public class DetailsModel : PageModel
     {
-        private readonly TinyUniveristy.Models.SchoolContext _context;
+        private readonly TinyUniversity.Models.SchoolContext _context;
 
-        public DetailsModel(TinyUniveristy.Models.SchoolContext context)
+        public DetailsModel(TinyUniversity.Models.SchoolContext context)
         {
             _context = context;
         }
